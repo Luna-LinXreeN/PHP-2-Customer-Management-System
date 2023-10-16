@@ -1,0 +1,145 @@
+:root{
+    --p-color: #464a52;
+    --error-color : #f34141;
+    --deleteBtn: #851212;
+    --bg-list: rgb(79, 120, 178);
+    --bg-list-hover: rgb(133, 169, 229);
+    --bg-color: rgb(191, 131, 206);
+    --bg-color-header: rgba(89, 122, 220, 0.7);
+    --table-th-color: rgba(182, 141, 255, 0.9);
+    --table-td-color: rgba(177, 163, 199, 0.8);
+    --table-hover-color: rgba(230, 229, 232, 0.6);
+
+    --borderRadius: 20px;
+    --vw: 1.1vw;
+    --2vw: 2.1vw;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--bg-color);
+    color: var(--p-color);
+    margin: 0 auto;
+    font-family: Arial, serif;
+}
+h1{
+    font-size: clamp(2.5rem, 8vw, 3rem);
+}
+
+.databaseText{
+    font-size: 0.4em;
+}
+.errorMsg{
+    color: var(--error-color);
+}
+
+header, main, nav{
+    background-color: var(--bg-color-header);
+    width: 90%;
+    margin-bottom: var(--vw);
+    border-radius: var(--borderRadius);
+
+    display: flex;
+    flex-direction: column;
+}
+header div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+form input[type = "submit"]{
+    border: none;
+    font-weight: bold;
+    font-size: 1.05em;
+    border-radius: var(--borderRadius);
+    padding: var(--vw) var(--2vw);
+    background-color: var(--bg-list);
+}
+form input[type = "submit"]:hover{
+    background-color: var(--bg-list-hover);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--vw);
+}
+form div{
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--vw);
+}
+form div:last-child{
+    justify-content: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    margin: var(--vw);
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--p-color);
+    border-radius: var(--borderRadius);
+    background-color: var(--bg-list);
+    padding: var(--vw) var(--2vw);
+}
+nav ul li a:hover{
+    background-color: var(--bg-list-hover);
+}
+
+table{
+    margin: var(--vw);
+}
+tr:hover{
+    background-color: var(--table-hover-color);
+}
+tr th{
+    background-color: var(--table-th-color);
+}
+tr td{
+    background-color: var(--table-td-color);
+}
+tr th, tr td{
+    width: 11%;
+}
+tr th:hover, tr td:hover{
+    background-color: var(--table-hover-color);
+}
+.edit, .delete{
+    text-decoration: none;
+    border-radius: var(--borderRadius);
+    color: var(--p-color);
+    padding: 0.7vw 1.5vw;
+}
+.delete{
+     background-color: var(--deleteBtn);
+     color: #ffffff;
+ }
+.edit{
+    background-color: var(--bg-list);
+}
+.delete:hover{
+    background-color: var(--error-color);
+    color: var(--p-color);
+}
+.edit:hover{
+    background-color: var(--bg-list-hover);
+}
